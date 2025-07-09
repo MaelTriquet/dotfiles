@@ -1,3 +1,5 @@
+-- TODO: Make a plugin for {} movement, but tab smart
+
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
@@ -93,6 +95,8 @@ vim.opt.confirm = true
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
+-- set ctrl+backspace to delete word in insert mode
+vim.keymap.set('i', '<C-H>', '<C-W>')
 vim.keymap.set('n', 'Q', '@q', { desc = 'throwaway macro' })
 vim.keymap.set('n', 'c', '"_c', { desc = 'stop copying using c' })
 -- vim.keymap.set('n', 's', '"_s', { desc = 'stop copying using s' })
@@ -859,17 +863,17 @@ require('lazy').setup({
             -- Simple and easy statusline.
             --  You could remove this setup call if you don't like it,
             --  and try some other statusline plugin
-            local statusline = require 'mini.statusline'
-            -- set use_icons to true if you have a Nerd Font
-            statusline.setup { use_icons = vim.g.have_nerd_font }
+            -- local statusline = require 'mini.statusline'
+            -- -- set use_icons to true if you have a Nerd Font
+            -- statusline.setup { use_icons = vim.g.have_nerd_font }
 
             -- You can configure sections in the statusline by overriding their
             -- default behavior. For example, here we set the section for
             -- cursor location to LINE:COLUMN
             ---@diagnostic disable-next-line: duplicate-set-field
-            statusline.section_location = function()
-                return '%2l:%-2v'
-            end
+            -- statusline.section_location = function()
+            --     return '%2l:%-2v'
+            -- end
 
             -- ... and there is more!
             --  Check out: https://github.com/echasnovski/mini.nvim
@@ -954,13 +958,33 @@ require('lazy').setup({
         config = function()
             require('leap').set_default_mappings()
             require('leap').setup {
-                safe_labels = 'zrtyupsfjkmwvbn,;!ZRTYUPSFJKMWVBN?./',
+                safe_labels = 'sfhjkl;tyuznm,./SFHJKLTYUZNM?',
             }
         end,
     },
 
     { 'ggandor/flit.nvim', opts = {} },
     { 'tpope/vim-repeat' },
+    {
+        'AlphaTechnolog/pywal.nvim',
+        as = 'pywal',
+        config = function()
+            require('pywal').setup()
+        end,
+    },
+    {
+        'nvim-lualine/lualine.nvim',
+        dependencies = { 'nvim-tree/nvim-web-devicons' },
+        config = function()
+            local lualine = require 'lualine'
+
+            lualine.setup {
+                options = {
+                    theme = 'pywal-nvim',
+                },
+            }
+        end,
+    },
 }, {
     ui = {
         -- If you are using a Nerd Font: set icons to an empty table which will use the
@@ -987,4 +1011,7 @@ vim.keymap.set('n', '<leader>gg', function()
     require('git_branch').files()
 end)
 -- The line beneath this is called `modeline`. See `:help modeline`
+
+vim.keymap.set('n', 'rbg', '<cmd>lua require("pywal").setup()<CR><cmd>lua require("lualine").setup()<CR>')
+
 -- vim: ts=2 sts=2 sw=2 et
