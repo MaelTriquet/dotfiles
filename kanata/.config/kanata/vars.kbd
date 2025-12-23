@@ -1,0 +1,8 @@
+(defvar
+  tap-time   200
+  hold-time  250
+  chord-time 150
+  tt         $tap-time
+  ht         $hold-time
+  ct         $chord-time
+)

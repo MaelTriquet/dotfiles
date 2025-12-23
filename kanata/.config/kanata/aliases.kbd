@@ -1,0 +1,10 @@
+(defalias
+  ;; --- Layer switching ---
+  normal (layer-switch normal)
+  insert (layer-switch insert)
+  nav    (layer-switch nav)
+  speed    (layer-switch speed)
+
+  ;; --- Swap layers ---
+  space-nav (tap-hold $tap-time $hold-time spc @nav)
+)

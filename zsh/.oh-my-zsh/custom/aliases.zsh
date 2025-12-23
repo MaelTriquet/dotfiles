@@ -1,0 +1,7 @@
+alias v="nvim"
+alias la="ls -a"
+alias c="clear"
+alias py="python"
+alias cl="wl-copy"
+alias ai="/home/mael/.conda/envs/chatbot/bin/python ~/chat.py"
+alias nano="nvim"

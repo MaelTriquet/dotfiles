@@ -1,0 +1,9 @@
+(include conf.kbd)
+(include vars.kbd)
+(include aliases.kbd)
+(include layers/insert.kbd)
+(include layers/normal.kbd)
+(include layers/nav.kbd)
+(include layers/speed.kbd)
+;;(include chords.kbd)
+

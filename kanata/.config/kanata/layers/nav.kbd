@@ -1,0 +1,74 @@
+(deflayer nav
+  @grv-v  @1-v    @2-v    @3-v    @4-v    @5-v    @6-v    @7-v    @8-v    @9-v    @0-v    @--v    @=-v    @bspc-v
+  @tab-v  @q-v    @w-v    @e-v    @r-v    @t-v    @y-v    @u-v    @i-v    @o-v    @p-v    @[-v    @]-v    @\-v
+  @caps-v @a-v    @s-v    @d-v    @f-v    @g-v    @h-v    @j-v    @k-v    @l-v    @;-v    @'-v    @ret-v
+  @lsft-v @z-v    @x-v    @c-v    @v-v    @b-v    @n-v    @m-v    @,-v    @.-v    @/-v    @rsft-v
+  @lctl-v @lmet-v @lalt-v           @spc-v            @ralt-v @rmet-v @rctl-v
+)
+(defalias
+grv-v  _
+1-v  _
+2-v  _
+3-v  _
+4-v  _
+5-v  _
+6-v  _
+7-v  _
+8-v  _
+9-v  _
+0-v  _
+--v  _
+=-v  _
+bspc-v  _
+
+tab-v  _
+q-v  _
+w-v C-right
+e-v  _
+r-v  _
+t-v  _
+y-v  _
+u-v  _
+i-v  @insert
+o-v  _
+p-v  _
+[-v  _
+]-v  _
+\-v  _
+
+caps-v  _
+a-v  _
+s-v  _
+d-v  _
+f-v  _
+g-v  _
+h-v  left
+j-v  down
+k-v  up
+l-v  right
+;-v  _
+'-v  _
+ret-v  _
+
+lsft-v  _
+z-v  _
+x-v  _
+c-v  _
+v-v  _
+b-v C-left
+n-v  _
+m-v  _
+,-v  _
+.-v  _
+/-v  _
+rsft-v  _
+
+lctl-v  _
+lmet-v  _
+lalt-v  _
+spc-v  _
+ralt-v  _
+rmet-v  _
+rctl-v  _
+)
+

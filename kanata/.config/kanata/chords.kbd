@@ -1,0 +1,4 @@
+(defchords
+  ;; Press j and k together => ESC
+  ((j k) esc $chord-time)
+)

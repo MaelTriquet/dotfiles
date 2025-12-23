@@ -1,0 +1,73 @@
+(deflayer normal
+  @grv-n  @1-n    @2-n    @3-n    @4-n    @5-n    @6-n    @7-n    @8-n    @9-n    @0-n    @--n    @=-n    @bspc-n
+  @tab-n  @q-n    @w-n    @e-n    @r-n    @t-n    @y-n    @u-n    @i-n    @o-n    @p-n    @[-n    @]-n    @\-n
+  @caps-n @a-n    @s-n    @d-n    @f-n    @g-n    @h-n    @j-n    @k-n    @l-n    @;-n    @'-n    @ret-n
+  @lsft-n @z-n    @x-n    @c-n    @v-n    @b-n    @n-n    @m-n    @,-n    @.-n    @/-n    @rsft-n
+  @lctl-n @lmet-n @lalt-n           @spc-n            @ralt-n @rmet-n @rctl-n
+)
+(defalias
+grv-n  XX
+1-n  XX
+2-n  XX
+3-n  XX
+4-n  XX
+5-n  XX
+6-n  XX
+7-n  XX
+8-n  XX
+9-n  XX
+0-n  XX
+--n  XX
+=-n  XX
+bspc-n  XX
+
+tab-n  XX
+q-n  XX
+w-n  XX
+e-n  XX
+r-n  XX
+t-n  XX
+y-n  XX
+u-n  XX
+i-n  @insert
+o-n  XX
+p-n  XX
+[-n  XX
+]-n  XX
+\-n  XX
+
+caps-n  XX
+a-n  XX
+s-n  XX
+d-n  XX
+f-n  XX
+g-n  XX
+h-n  XX
+j-n  XX
+k-n  XX
+l-n  XX
+;-n  XX
+'-n  XX
+ret-n  XX
+
+lsft-n  XX
+z-n  XX
+x-n  XX
+c-n  XX
+v-n  XX
+b-n  XX
+n-n  XX
+m-n  XX
+,-n  XX
+.-n  XX
+/-n  XX
+rsft-n  XX
+
+lctl-n  XX
+lmet-n  XX
+lalt-n  XX
+spc-n  XX
+ralt-n  XX
+rmet-n  XX
+rctl-n  XX
+)
