@@ -49,11 +49,84 @@ vim.keymap.set('n', 'c', '"_c')
 vim.keymap.set('v', '<', '<gv', { noremap = true, silent = true })
 vim.keymap.set('v', '>', '>gv', { noremap = true, silent = true })
 
-vim.keymap.set({ 'n', 'v' }, ',f', '?➜<CR><cmd>nohlsearch<CR>0', { noremap = true, silent = true })
+-- previous command
+vim.keymap.set({ 'n', 'v' }, ',f', 'k?➜<CR><cmd>nohlsearch<CR>0', { noremap = true, silent = true })
+
+-- next command
+vim.keymap.set({ 'n', 'v' }, ',F', '/➜<CR><cmd>nohlsearch<CR>0', { noremap = true, silent = true })
+
+-- Select command output
+vim.keymap.set('n', 'vic', 'k?➜<CR>jV/➜<CR>k<cmd>noh<CR>', { silent = true })
+
+-- Yank command output
+vim.keymap.set('n', 'yic', 'k?➜<CR>jV/➜<CR>ky<cmd>noh<CR>', { silent = true })
 
 vim.keymap.set('n', 'Q', '@q')
 vim.keymap.set('n', '<leader>q', ':q<CR>')
 vim.keymap.set('n', '<leader>w', ':w<CR>')
 vim.keymap.set('n', '<leader>wq', ':wq<CR>')
+
+local function listed_buffers()
+  local bufs = {}
+  for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+    if vim.fn.buflisted(buf) == 1 then
+      table.insert(bufs, buf)
+    end
+  end
+  return bufs
+end
+
+local function smart_q()
+  local bufs = listed_buffers()
+
+  -- Only one buffer → normal quit
+  if #bufs <= 1 then
+    vim.cmd 'quit'
+    return
+  end
+
+  -- Find oldest buffer (smallest bufnr)
+  table.sort(bufs)
+  local oldest = bufs[1]
+
+  -- Delete all others
+  for i = #bufs, 2, -1 do
+    pcall(vim.api.nvim_buf_delete, bufs[i], { force = true })
+  end
+
+  -- Go to oldest buffer
+  vim.cmd('buffer ' .. oldest)
+  vim.cmd 'startinsert'
+end
+
+local function smart_wq()
+  local bufs = listed_buffers()
+
+  -- Always write current buffer first
+  vim.cmd 'write'
+
+  -- One buffer → write & quit
+  if #bufs <= 1 then
+    vim.cmd 'quit'
+    return
+  end
+
+  -- Same logic as smart_q
+  table.sort(bufs)
+  local oldest = bufs[1]
+
+  for i = #bufs, 2, -1 do
+    pcall(vim.api.nvim_buf_delete, bufs[i], { force = true })
+  end
+
+  vim.cmd('buffer ' .. oldest)
+  vim.cmd 'startinsert'
+end
+
+vim.api.nvim_create_user_command('Q', smart_q, {})
+vim.api.nvim_create_user_command('WQ', smart_wq, {})
+
+vim.cmd 'cabbrev q Q'
+vim.cmd 'cabbrev wq WQ'
 
 -- vim: ts=2 sts=2 sw=2 et

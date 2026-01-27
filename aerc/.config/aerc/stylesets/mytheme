@@ -2,17 +2,16 @@
 *.default = true
 *.normal = true
 
-# Base colors from your Alacritty theme
-# bg = #0e091d
-# fg = #14B9B5
-
+# ───────────────────────────────────────────────
+# BASE
+# ───────────────────────────────────────────────
 default.bg = #0e091d
-default.fg = #14B9B5
+default.fg = #e8d9b0
 
 # ───────────────────────────────────────────────
 # STATUSLINE
 # ───────────────────────────────────────────────
-statusline_default.bg = #14B9B5
+statusline_default.bg = #ff7f41
 statusline_default.fg = #0e091d
 statusline_default.bold = true
 
@@ -25,100 +24,102 @@ statusline_success.fg = #0e091d
 # ───────────────────────────────────────────────
 # GENERAL UI
 # ───────────────────────────────────────────────
-title.fg = #14B9B5
+title.fg = #ff7f41
 title.bg = #0e091d
 title.bold = true
 
-header.fg = #c8e967     # bright lime
+header.fg = #ff7f41
 header.bold = true
 
 error.fg = #f93d3b
 error.bold = true
 
-warning.fg = #FF7F41
+warning.fg = #ff7f41
 warning.bold = true
 
 success.fg = #7cd699
 success.bold = true
 
-border.bg = #14B9B5
-border.fg = #0e091d
+border.fg = #ff7f41
+border.bg = #0e091d
 
 # ───────────────────────────────────────────────
 # DIRECTORY LIST (sidebar)
 # ───────────────────────────────────────────────
-dirlist_default.fg = #14B9B5
+dirlist_default.fg = #ffbf91
 dirlist_default.bg = #0e091d
 
-dirlist_unread.fg = #e325f3
-dirlist_recent.fg = #04C5F0
+dirlist_unread.fg = #ff7f41
+dirlist_recent.fg = #7cd699
 
-dirlist_default.selected.bg = #14B9B5
-dirlist_default.selected.fg = #0e091d
+dirlist_default.selected.bg = #ffbf91
+dirlist_default.selected.fg = #000000
 dirlist_default.selected.bold = true
 
 # ───────────────────────────────────────────────
 # MESSAGE LIST
 # ───────────────────────────────────────────────
-msglist_default.fg = #14B9B5
+msglist_default.fg = #e8d9b0
 msglist_default.bg = #0e091d
 
-msglist_unread.fg = #e325f3
+msglist_unread.fg = #ff7f41
 msglist_unread.bold = true
 
-msglist_read.fg = #A60234
+msglist_read.fg = #e8d9b0
+#
+msglist_answered.fg = #7cd699
+msglist_forwarded.fg = #04c5f0
 
-msglist_answered.fg = #9147a8
-msglist_forwarded.fg = #04C5F0
-
-msglist_flagged.fg = #FF7F41
-msglist_deleted.fg = #BE3F50
+msglist_flagged.fg = #ff7f41
+msglist_deleted.fg = #c53253
 msglist_deleted.dim = true
 
-msglist_marked.fg = #fd3e6a
-msglist_marked.bg = #6C032C
+msglist_marked.fg = #0e091d
+msglist_marked.bg = #ff7f41
 
-msglist_result.fg = #c53253
+msglist_result.fg = #c8e967
 
-msglist_default.selected.bg = #14B9B5
-msglist_default.selected.fg = #0e091d
+
+msglist_default.selected.bg = #2e293d
+msglist_default.selected.fg = #000000
 msglist_default.selected.bold = true
 
 # ───────────────────────────────────────────────
 # COMPLETIONS
 # ───────────────────────────────────────────────
-completion_default.fg = #14B9B5
+completion_default.fg = #e8d9b0
 completion_default.bg = #0e091d
 
 completion_description.fg = #7cd699
 completion_description.dim = true
 
 completion_gutter.bg = #0e091d
-completion_pill.bg = #14B9B5
+completion_pill.bg = #ff7f41
 completion_pill.fg = #0e091d
 
 # ───────────────────────────────────────────────
 # TABS
 # ───────────────────────────────────────────────
 tab.bg = #0e091d
-tab.fg = #14B9B5
+tab.fg = #ff7f41
 
-tab.selected.bg = #14B9B5
+tab.selected.bg = #ff7f41
 tab.selected.fg = #0e091d
+
 # ───────────────────────────────────────────────
 # SELECTOR
 # ───────────────────────────────────────────────
-selector_default.fg = #14B9B5
+selector_default.fg = #e8d9b0
 selector_default.bg = #0e091d
 
-selector_focused.fg = #0e091d
-selector_focused.bg = #14B9B5
+selector_focused.fg = #000000
+selector_focused.bg = #c8e967
 selector_focused.bold = true
 
 # ───────────────────────────────────────────────
 # SPINNER
 # ───────────────────────────────────────────────
-spinner.fg = #14B9B5
+spinner.fg = #ff7f41
 
 # ───────────────────────────────────────────────
 # VIEWER (colorize filter)
@@ -127,29 +128,29 @@ spinner.fg = #14B9B5
 *.default = true
 *.normal = true
 
-url.fg = #04C5F0
+url.fg = #04c5f0
 url.underline = true
 
 header.fg = #c8e967
 header.bold = true
 
-signature.fg = #9147a8
+signature.fg = #7cd699
 signature.dim = true
 
 diff_meta.bold = true
-diff_chunk.fg = #BE3F50
-diff_chunk_func.fg = #BE3F50
+diff_chunk.fg = #c53253
+diff_chunk_func.fg = #c53253
 diff_chunk_func.dim = true
 
 diff_add.fg = #7cd699
 diff_del.fg = #f93d3b
 
-quote_1.fg = #6C032C
-quote_2.fg = #9147a8
-quote_3.fg = #6C032C
+quote_1.fg = #ff7f41
+quote_2.fg = #c8e967
+quote_3.fg = #7cd699
 quote_3.dim = true
-quote_4.fg = #9147a8
+quote_4.fg = #04c5f0
 quote_4.dim = true
-quote_x.fg = #14B9B5
+quote_x.fg = #c53253
 quote_x.dim = true
 

@@ -28,6 +28,8 @@ require('lazy').setup({
 
   require 'kickstart.plugins.vimtex',
 
+  -- require 'kickstart.plugins.smear',
+
   -- require 'kickstart.plugins.debug',
   -- require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',

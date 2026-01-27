@@ -47,3 +47,8 @@ condainit() {
   conda deactivate 2> /dev/null
 }
 export NNN_PLUG='f:finder;o:fzopen;p:mocq;d:diffs;t:nmount;v:imgview'
+
+# opencode
+export PATH=/home/mael/.opencode/bin:$PATH
+
+export VIMTEX_OUTPUT_DIRECTORY=/tmp
