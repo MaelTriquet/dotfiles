@@ -48,6 +48,8 @@ condainit() {
 }
 export NNN_PLUG='f:finder;o:fzopen;p:mocq;d:diffs;t:nmount;v:imgview'
 
+PROMPT='%m '$PROMPT
+
 # opencode
 export PATH=/home/mael/.opencode/bin:$PATH
 
