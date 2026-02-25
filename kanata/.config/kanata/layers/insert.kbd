@@ -5,5 +5,5 @@
   lsft z    x    c    v    b    n    m    ,    .    /    rsft
   lctl spc  lalt           @spc_meta            ralt rmet @speed
 )
-(defalias spc_meta (tap-hold-press $tt $ht spc lmet ))
+(defalias spc_meta (tap-hold $tt $ht spc lmet ))
 ;; Unused keys: lmet, rmet, caps-hold, tab-hold, lsft-tap, rsft-tap, ralt-hold, rctl, lalt-tap, lctl-tap

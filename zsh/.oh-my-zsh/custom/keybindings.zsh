@@ -1,4 +1,5 @@
 bindkey -M viins ',a' autosuggest-accept
+bindkey -M viins ',w' vi-forward-word
 
 bindkey -M viins ',c' autosuggest-clear
 
