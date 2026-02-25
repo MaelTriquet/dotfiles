@@ -62,9 +62,6 @@ vim.keymap.set('n', 'vic', 'k?➜<CR>jV/➜<CR>k<cmd>noh<CR>', { silent = true }
 vim.keymap.set('n', 'yic', 'k?➜<CR>jV/➜<CR>ky<cmd>noh<CR>', { silent = true })
 
 vim.keymap.set('n', 'Q', '@q')
-vim.keymap.set('n', '<leader>q', ':q<CR>')
-vim.keymap.set('n', '<leader>w', ':w<CR>')
-vim.keymap.set('n', '<leader>wq', ':wq<CR>')
 
 local function listed_buffers()
   local bufs = {}

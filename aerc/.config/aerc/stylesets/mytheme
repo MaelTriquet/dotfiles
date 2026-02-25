@@ -31,7 +31,7 @@ title.bold = true
 header.fg = #ff7f41
 header.bold = true
 
-error.fg = #f93d3b
+error.fg = #0e091d
 error.bold = true
 
 warning.fg = #ff7f41
